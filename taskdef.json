@@ -1,0 +1,56 @@
+{
+    "containerDefinitions": [
+        {
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "test-ecs-WebsiteService-167YUJ1AGP82B",
+                    "awslogs-region": "us-east-1"
+                }
+            },
+            "entryPoint": [],
+            "portMappings": [
+                {
+                    "hostPort": 0,
+                    "protocol": "tcp",
+                    "containerPort": 80
+                }
+            ],
+            "cpu": 10,
+            "memory": 128,
+            "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+            "essential": true,
+            "name": "website-service"
+        }
+    ],
+    "compatibilities": [
+        "EC2"
+    ],
+    "family": "website-service",
+    "requiresAttributes": [
+        {
+            "targetId": null,
+            "targetType": null,
+            "value": null,
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        },
+        {
+            "targetId": null,
+            "targetType": null,
+            "value": null,
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "targetId": null,
+            "targetType": null,
+            "value": null,
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "targetId": null,
+            "targetType": null,
+            "value": null,
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        }
+    ]
+}
