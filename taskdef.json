@@ -4,7 +4,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "test-ecs-WebsiteService-167YUJ1AGP82B",
+                    "awslogs-group": "%LOG_GROUP%",
                     "awslogs-region": "us-east-1"
                 }
             },
@@ -23,34 +23,5 @@
             "name": "website-service"
         }
     ],
-    "compatibilities": [
-        "EC2"
-    ],
-    "family": "website-service",
-    "requiresAttributes": [
-        {
-            "targetId": null,
-            "targetType": null,
-            "value": null,
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
-        },
-        {
-            "targetId": null,
-            "targetType": null,
-            "value": null,
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        },
-        {
-            "targetId": null,
-            "targetType": null,
-            "value": null,
-            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-        },
-        {
-            "targetId": null,
-            "targetType": null,
-            "value": null,
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-        }
-    ]
+    "family": "website-service"
 }
