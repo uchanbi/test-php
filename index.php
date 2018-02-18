@@ -1,3 +1,3 @@
 <?php 
- echo "Hello World bihan chandula"; 
+ echo "Hello World bihan chandula adimali"; 
 ?>
